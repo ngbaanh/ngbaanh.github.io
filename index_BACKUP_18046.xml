@@ -75,14 +75,35 @@ $ touch main.c
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ nano main.c
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;!--
-[![Hello world](http://img.youtube.com/vi/NpVeCllju3Q/0.jpg)](http://www.youtube.com/watch?v=NpVeCllju3Q &#34;Click to play&#34;)
+<<<<<<< .merge_file_dnsYUD
+&lt;!---&lt;center&gt;
+=======
+&lt;center&gt;
+>>>>>>> .merge_file_aoTRTm
+&lt;div class=&#34;embed video-player&#34;&gt;
+  &lt;iframe
+    class   = &#34;youtube-player&#34;
+    type    = &#34;text/html&#34;
+    width   = &#34;420&#34;
+    height  = &#34;240&#34;
+    src     = &#34;http://www.youtube.com/embed/NpVeCllju3Q?showinfo=0&amp;amp;rel=0&#34;
+    allowfullscreen
+    rel         = &#34;0&#34;
+    showinfo    = &#34;0&#34;
+    frameborder = &#34;0&#34;&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+<<<<<<< .merge_file_dnsYUD
+ --&gt;
 
-
---&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/Helloworld.mp4&#34; title=&#34;Click to play HD quality&#34;&gt;&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/Helloworld.gif&#34; alt=&#34;Hello world&#34; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=NpVeCllju3Q&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://img.youtube.com/vi/NpVeCllju3Q/0.jpg&#34; alt=&#34;Hello world&#34; /&gt;&lt;/a&gt;
 Phải kiểm tra mọi thứ thực sự ổn trước khi bắt đầu. 😹&lt;/p&gt;
+=======
+
+
+&lt;p&gt;Phải kiểm tra mọi thứ thực sự ổn trước khi bắt đầu. 😹&lt;/p&gt;
+>>>>>>> .merge_file_aoTRTm
 
 &lt;p&gt;&lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;p&gt;Hồi xưa học cấp 2 lúc đang làm thi thực hành Pascal, vừa đọc đề xong lao vào code no xôi chán chè thì build không được, nguyên nhân là do máy bị xì ke từ sớm, lúc chuyển sang máy khác thì không kịp nữa rồi.&lt;/p&gt;
