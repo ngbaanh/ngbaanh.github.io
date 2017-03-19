@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="Bá Anh Nguyễn">
+  <meta name="description" content="Junior Developer">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora|Roboto+Mono"> 
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://ngbaanh.github.io/index.xml" type="application/rss+xml" title="Bá Anh Nguyễn">
+  <link rel="feed" href="https://ngbaanh.github.io/index.xml" type="application/rss+xml" title="Bá Anh Nguyễn">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://ngbaanh.github.io/post/tap-code--viet-ham-xep-loai-hoc-sinh/">
+
+  
+
+  <title>☘Tập Code: Viết hàm xếp loại học sinh | Bá Anh Nguyễn</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Bá Anh Nguyễn</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">☘Tập Code: Viết hàm xếp loại học sinh</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-19 11:34:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Mar 19, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/t%e1%ba%adp-code">tập code</a
+    >, 
+    
+    <a href="/tags/c">C</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code--viet-ham-xep-loai-hoc-sinh%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e2%98%98T%e1%ba%adp%20Code%3a%20Vi%e1%ba%bft%20h%c3%a0m%20x%e1%ba%bfp%20lo%e1%ba%a1i%20h%e1%bb%8dc%20sinh&amp;url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code--viet-ham-xep-loai-hoc-sinh%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code--viet-ham-xep-loai-hoc-sinh%2f&amp;title=%e2%98%98T%e1%ba%adp%20Code%3a%20Vi%e1%ba%bft%20h%c3%a0m%20x%e1%ba%bfp%20lo%e1%ba%a1i%20h%e1%bb%8dc%20sinh"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code--viet-ham-xep-loai-hoc-sinh%2f&amp;title=%e2%98%98T%e1%ba%adp%20Code%3a%20Vi%e1%ba%bft%20h%c3%a0m%20x%e1%ba%bfp%20lo%e1%ba%a1i%20h%e1%bb%8dc%20sinh"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e2%98%98T%e1%ba%adp%20Code%3a%20Vi%e1%ba%bft%20h%c3%a0m%20x%e1%ba%bfp%20lo%e1%ba%a1i%20h%e1%bb%8dc%20sinh&amp;body=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code--viet-ham-xep-loai-hoc-sinh%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="đặt-vấn-đề">Đặt vấn đề</h1>
+
+<p><em>Hôm nay cuối tuần rảnh rỗi nên viết bài đầu tiên về Series Tập Code, đến bây giờ cũng code được một vài năm bây giờ nhớ lại những bài toán năm xưa tuy đơn giản nhưng làm mình bối rối khôn cùng.</em></p>
+
+<p>Cùng xem chi tiết bài toán nhé.</p>
+
+<p>Điều kiện đánh giá và xếp loại học sinh như sau:</p>
+
+<blockquote>
+<ul>
+<li><p>Học sinh thi 3 môn Toán, Lý, Hoá được đánh giá <code>học lực</code> trên thang điểm <code>10</code>. Thang xếp loại học lực từ cao đến thấp thứ tự như sau: <code>Giỏi, Khá, Trung Bình, Yếu</code>.</p></li>
+
+<li><p>Học sinh cũng được đánh giá <code>rèn luyện</code> trên thang điểm <code>10</code>. Thang xếp loại tương tự thang xếp loại học lực: <code>Tốt, Khá, Trung Bình, Yếu</code>. Xếp loại phải tương ứng với năng lực.</p></li>
+
+<li><p>Điểm trung bình chung nhỏ hơn 5.0 thì <code>xếp loại ban đầu</code> <em>Yếu</em>.</p></li>
+
+<li><p>Điểm trung bình chung từ 5.0 đến dưới 6.5 thì xếp loại ban đầu <em>Trung Bình</em>.</p></li>
+
+<li><p>Điểm trung bình chung từ 6.5 đến dưới 8.0 thì xếp loại ban đầu <em>Khá</em>.</p></li>
+
+<li><p>Điểm trung bình chung từ 8.0 trở lên thì xếp loại ban đầu <em>Giỏi</em>.</p></li>
+
+<li><p>Học sinh <code>xếp loại ban đầu</code> <em>Khá, Giỏi</em> chỉ khi có điểm rèn luyện tương đương và điểm thành phần 3 môn có xếp loại tương ứng từ <em>Trung Bình, Khá</em> trở lên. Nếu không thì giảm một bậc.</p></li>
+
+<li><p>Trong các điểm thành phần, nếu có bất kì điểm nào nhỏ hơn 3.0, thì lập tức <code>xếp loại</code> Yếu.</p></li>
+</ul>
+</blockquote>
+
+<p><code>Yêu cầu</code></p>
+
+<blockquote>
+<p>Viết một hàm đánh giá bằng ngôn ngữ C, đầu vào điểm thi 3 môn và điểm rèn luyện, đầu ra là một chuỗi đánh giá xếp loại thuộc bộ <code>{4, 3, 2, 1, 0}</code> tương ứng thang xếp loại trong đề bài và <code>0</code> là không đánh giá được.</p>
+</blockquote>
+
+<p>Bài toán ai cũng biết, đã làm lập trình tất cả đều đã làm qua nhưng mà mình vẫn thấy nó có ích nên viết lại. Để ngắn gọn thì những điểm cần lưu ý mình đã đánh dấu nổi bật ngay trong đề bài bên trên. Lưu ý ngôn ngữ C ở đây  là <code>Standard C</code> chứ không phải C++ hoặc C# nhé (vì lúc viết bài này máy mình chỉ có C thôi).</p>
+
+<p>Sau khi đọc xong đề bài thì lập tức tất cả đều có thể hình dung ra nguyên mẫu hàm như sau, dòm qua để nhảy sang phần sau nhé.</p>
+
+<pre><code class="language-C">int danh_gia(float toan, float ly, float hoa, float rl);
+</code></pre>
+
+<h1 id="chuẩn-bị-những-gì-để-bắt-đầu">Chuẩn bị những gì để bắt đầu</h1>
+
+<p><em>Với những bạn sử dụng Windows thì có thể dùng bất kì cái gì đó code C được như DevCpp, hoặc CodeBlock hay gì gì đó khác là ok rồi. Mình chia tay Windows rồi thì sử dụng Terminal thay thế vậy, máy mình cũng chẳng cài gì nên chỉ có ngôn ngữ C là làm được trực tiếp mà thôi.</em></p>
+
+<p>Trước tiên chúng ta di chuyển đến đâu đó trong máy tính, tạo một thư mục để chứa tệp mã nguồn. Ở đây mình sẽ tạo ngay giữa <code>Desktop</code> một thư mục <code>tap-code</code>, sau đó tạo tệp <code>main.c</code>:</p>
+
+<pre><code class="language-sh">$ cd ~/Desktop/
+$ mkdir tap-code &amp;&amp; cd tap-code
+$ touch main.c
+</code></pre>
+
+<p>Mở nó ra và chiến thôi, tuỳ các bạn muốn mở nó trong IDE hay Notepad, còn nếu ai đó nhác như mình thì xử lí ngay tại cái Terminal với <code>nano</code>:</p>
+
+<pre><code class="language-sh">$ nano main.c
+</code></pre>
+
+<center>
+<div class="embed video-player">
+  <iframe
+    class   = "youtube-player"
+    type    = "text/html"
+    width   = "420"
+    height  = "240"
+    src     = "http://www.youtube.com/embed/NpVeCllju3Q?showinfo=0&amp;rel=0"
+    allowfullscreen
+    rel         = "0"
+    showinfo    = "0"
+    frameborder = "0">
+  </iframe>
+</div>
+</center>
+
+
+<p>Phải kiểm tra mọi thứ thực sự ổn trước khi bắt đầu. 😹</p>
+
+<p><div class="alert alert-warning">
+  <p>Hồi xưa học cấp 2 lúc đang làm thi thực hành Pascal, vừa đọc đề xong lao vào code no xôi chán chè thì build không được, nguyên nhân là do máy bị xì ke từ sớm, lúc chuyển sang máy khác thì không kịp nữa rồi.</p>
+
+</div>
+
+<div class="alert alert-note">
+  <p>Trước khi bắt tay làm gì phải đảm bảo HelloWorld chạy được, mất có 16 giây thôi các bạn ạ.</p>
+
+</div>
+</p>
+
+<h1 id="quay-lại-giải-quyết-bài-toán">Quay lại giải quyết bài toán</h1>
+
+<p><em>Có thể thấy là bài toán này có quá nhiều điều kiện lằng nhằng với nhau, nhưng chúng ta hãy khoan code ngay mà đánh giá nó trước. Phải tập trung xử lí những điều kiện mang tính quyết định trước.</em></p>
+
+<h2 id="1-đầu-tiên-là-hợp-lệ-dữ-liệu">1. Đầu tiên là hợp lệ dữ liệu</h2>
+
+<p>Chúng ta phải đảm bảo rằng người ta nhập điểm từ 0.0 ~ 10.0, đầu vào sai mà còn nhây lì tính toán là không được. Cho nên nếu dữ liệu sai thì phải trả về <code>0</code> ngay lập tức.  😈</p>
+
+<pre><code class="language-c">int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &lt; 0 || ly &lt; 0 || hoa &lt; 0 || rl &lt; 0 || toan &gt; 10 || ly &gt; 10 || hoa &gt; 10 || rl &gt; 10) {
+    return 0; // --KHÔNG ĐÁNH GIÁ ĐƯỢC
+  }
+  // ... CODE NẾU HỢP LỆ
+}
+</code></pre>
+
+<p>Sau câu lệnh <code>return</code> không một dòng code nào được thực thi nữa, cho nên lúc này ta có thể viết tiếp mà không cần cụm <code>else { ... }</code> nữa. Viết xuống bên dưới.</p>
+
+<h2 id="2-điều-kiện-loại-bỏ-những-sự-thật-hiển-nhiên">2. Điều kiện loại bỏ, những sự thật hiển nhiên</h2>
+
+<blockquote>
+<p>&hellip; Xếp loại phải tương ứng với năng lực.
+Trong các điểm thành phần, nếu có bất kì điểm nào nhỏ hơn 3.0, thì lập tức xếp loại Yếu.</p>
+</blockquote>
+
+<p>Đây là trường hợp thấy xếp loại ngay mà không cần tính toán, 😌 viết tiếp xuống bên dưới:</p>
+
+<pre><code class="language-c">int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &lt; 0 || ly &lt; 0 || hoa &lt; 0 || rl &lt; 0 || toan &gt; 10 || ly &gt; 10 || hoa &gt; 10 || rl &gt; 10) {
+    return 0; // --KHÔNG ĐÁNH GIÁ ĐƯỢC
+  }
+  if (toan &lt; 3 || ly &lt; 3 || hoa &lt; 3 || rl &lt; 5) { return 1; } // --YẾU
+  // ... CODE NẾU CẦN TÍNH TOÁN
+}
+</code></pre>
+
+<h2 id="3-xác-định-xếp-loại-ban-đầu">3. Xác định xếp loại ban đầu</h2>
+
+<p>Cần tính điểm trung bình chung của 3 môn học mới xét tiếp được.</p>
+
+<pre><code class="language-c">int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE NẾU CẦN TÍNH TOÁN
+  float tb = (toan + ly + hoa) / 3;
+  int xep_loai = tb &lt; 5.0 ? 1 : (tb &lt; 6.5 ? 2 : (tb &lt; 8.0 ? 3 : 4));
+  // ... CODE SÀNG LỌC
+}
+</code></pre>
+
+<p>Đoạn code tính xếp loại ban đầu như trên sử dụng toán tử điều kiện <code>?:</code> cho ngắn gọn bởi vì mỗi nhánh rẽ ra nó chỉ thực hiện 1 công việc duy nhất là gán dữ liệu. Diễn giải ra thì như thế này, quá dài phải không:</p>
+
+<pre><code class="language-c">int xep_loai;
+if (tb &lt; 5.0) { xep_loai = 1; }      // --YẾU
+else if (tb &lt; 6.5) { xep_loai = 2; } // --TRUNG BÌNH
+else if (tb &lt; 8.0) { xep_loai = 3; } // --KHÁ
+else { xep_loai = 4; }               // --GIỎI
+</code></pre>
+
+<h2 id="4-sàng-lọc-xếp-loại">4. Sàng lọc xếp loại</h2>
+
+<p>Tiêu chuẩn sàng lọc ở đây chỉ áp dụng cho học sinh <em>Khá</em> trở lên, gọi là thu gọn nhuệ khí của các anh ấy bớt, để hoà đồng hơn với những đứa học lực trung bình như mình.</p>
+
+<blockquote>
+<p>Đùa đấy 😂</p>
+</blockquote>
+
+<p>Đơn giản là xét cái <code>xep_loai</code> đã tính được ở ban nãy:</p>
+
+<pre><code class="language-c">int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE SÀNG LỌC
+  if (xep_loai == 3) { // --NẾU ANH ẤY TIẾN BỘ?
+    if (toan &lt; 5.0 || ly &lt; 5.0 || hoa &lt; 5.0 || rl &lt; 6.5) { // --MỐC HẠ KHÁ-&gt;TB
+      xep_loai--;
+    }
+  }
+  if (xep_loai == 4) { // --NẾU ANH ẤY TIẾN BỘ HƠN?
+    if (toan &lt; 6.5 || ly &lt; 6.5 || hoa &lt; 6.5 || rl &lt; 8.0) { // --MỐC HẠ GIỎI-&gt;KHÁ
+      xep_loai--;
+    }
+  }
+  // ...
+}
+</code></pre>
+
+<p>Bạn có thấy 4 lệnh if chồng nhau hơi vô duyên không 😄 rút nó ngắn bớt lại:</p>
+
+<pre><code class="language-c">int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE SÀNG LỌC
+  if (xep_loai == 3 &amp;&amp; (toan &lt; 5.0 || ly &lt; 5.0 || hoa &lt; 5.0 || rl &lt; 6.5)) {
+    xep_loai--;
+  }
+  if (xep_loai == 4 &amp;&amp; (toan &lt; 6.5 || ly &lt; 6.5 || hoa &lt; 6.5 || rl &lt; 8.0)) {
+    xep_loai--;
+  }
+  return xep_loai;
+}
+</code></pre>
+
+<p>Cuối cùng phải trả về kết quả xếp loại, thêm câu lệnh <code>return</code> vào cuối hàm.</p>
+
+<h2 id="5-xây-dựng-bộ-thử">5. Xây dựng bộ thử</h2>
+
+<p>Để biết cái mình code có chạy đúng hay không thì cần xây dựng một vài trường hợp thử để kiểm tra.
+Giả sử ta biết chắc một vài trường hợp thì có thể chọn ra để thử. Ví dụ bảng sau:</p>
+
+<p><img src="/img/post_img/tap-code-01/002.png" alt="Test cases" />
+Dựa vào thông tin trên ta thiết kế một hàm <code>kiem_tra()</code> để thử xem hàm <code>danh_gia()</code> có hoạt động đúng như mong đợi hay không.</p>
+
+<pre><code class="language-c">void kiem_tra() {
+  const int dong = 9, cot = 5;
+  // -- Dữ liệu: { Toán; Lý; Hoá; Rèn Luyện; Kết Quả Mong Đợi },
+  float data[dong][cot] = {
+    { 11 , 9.0, 9.0, 9.0, 0 },
+    { 9.0, 9.0, 9.0, 9.0, 4 },
+    { 7.0, 7.0, 7.0, 7.0, 3 },
+    { 6.0, 6.0, 6.0, 6.0, 2 },
+    { 3.5, 4.0, 6.0, 6.5, 1 },
+
+    { 2.5, 9.0, 8.0, 6.0, 1 },
+    { 6.0, 9.0, 9.0, 8.0, 3 },
+    { 7.0, 8.0, 9.0, 4.5, 1 },
+    { 4.0, 9.0, 8.0, 6.0, 2 }
+  };
+  int i, ketqua;
+  printf(&quot;==== BAT DAU KIEM TRA =====\n&quot;);
+  for (i = 0; i &lt; dong; i++) {
+    ketqua = danh_gia(data[i][0], data[i][1], data[i][2], data[i][3]);
+    printf(&quot;DanhGia(%2.1f, %2.1f, %2.1f, %2.1f) = %i | %i | %10s.\n&quot;,
+      data[i][0], data[i][1], data[i][2], data[i][3], ketqua,
+      (int)data[i][4],
+      ((int)data[i][4] == ketqua ? &quot;[o]&quot; : &quot;&gt;&gt; [x]&quot;)
+    );
+  }
+  printf(&quot;======== KET THUC =========\n&quot;);
+}
+</code></pre>
+
+<div class="alert alert-note">
+  <p>Cái mảng 2 chiều đó nên là nạp dữ liệu từ file để tiện đường chỉnh sửa sau này, phạm vi bài viết mình đặt luôn vào đó cho gọn.</p>
+
+</div>
+
+
+<h2 id="6-tận-hưởng-thành-quả">6. Tận hưởng thành quả</h2>
+
+<p>Chúng ta cần phải viết một chương trình hoàn chỉnh để kiểm tra:</p>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int danh_gia(float, float, float, float);
+void kiem_tra();
+
+int main() {
+  //printf(&quot;Hello world \n&quot;);
+  kiem_tra();
+  return 0;
+}
+
+int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &lt; 0 || ly &lt; 0 || hoa &lt; 0 || rl &lt; 0 || toan &gt; 10 || ly &gt; 10 || hoa &gt; 10 || rl &gt; 10) { return 0; }
+  if (toan &lt; 3 || ly &lt; 3 || hoa &lt; 3 || rl &lt; 5) { return 1; } // --YẾU
+  float tb = (toan + ly + hoa) / 3;
+  int xep_loai = tb &lt; 5.0 ? 1 : (tb &lt; 6.5 ? 2 : (tb &lt; 8.0 ? 3 : 4));
+  if (xep_loai == 3 &amp;&amp; (toan &lt; 5.0 || ly &lt; 5.0 || hoa &lt; 5.0 || rl &lt; 6.5)) {
+    xep_loai--; // --HẠ KHÁ &gt; TB
+  }
+  if (xep_loai == 4 &amp;&amp; (toan &lt; 6.5 || ly &lt; 6.5 || hoa &lt; 6.5 || rl &lt; 8.0)) {
+    xep_loai--; // --HẠ GIỎI &gt; KHÁ
+  }
+  return xep_loai;
+}
+
+void kiem_tra() {
+  const int dong = 9, cot = 5;
+  // -- Dữ liệu: { Toán; Lý; Hoá; Rèn Luyện; Kết Quả Mong Đợi },
+  float data[dong][cot] = {
+    { 11 , 9.0, 9.0, 9.0, 0 },
+    { 9.0, 9.0, 9.0, 9.0, 4 },
+    { 7.0, 7.0, 7.0, 7.0, 3 },
+    { 6.0, 6.0, 6.0, 6.0, 2 },
+    { 3.5, 4.0, 6.0, 6.5, 1 },
+
+    { 2.5, 9.0, 8.0, 6.0, 1 },
+    { 6.0, 9.0, 9.0, 8.0, 3 },
+    { 7.0, 8.0, 9.0, 4.5, 1 },
+    { 4.0, 9.0, 8.0, 6.0, 2 }
+  };
+  int i, ketqua;
+  printf(&quot;==== BAT DAU KIEM TRA =====\n&quot;);
+  for (i = 0; i &lt; dong; i++) {
+    ketqua = danh_gia(data[i][0], data[i][1], data[i][2], data[i][3]);
+    printf(&quot;DanhGia(%2.1f, %2.1f, %2.1f, %2.1f) = %i | %i | %10s.\n&quot;,
+      data[i][0], data[i][1], data[i][2], data[i][3], ketqua,
+      (int)data[i][4],
+      ((int)data[i][4] == ketqua ? &quot;[o]&quot; : &quot;&gt;&gt; [x]&quot;)
+    );
+  }
+  printf(&quot;======== KET THUC =========\n&quot;);
+}
+</code></pre>
+
+<p>Thực hiện biên dịch và chạy thử chương trình, nếu bạn đang dùng terminal như mình:</p>
+
+<pre><code class="language-sh">$ gcc -o main main.c &amp;&amp; ./main
+</code></pre>
+
+<p>Thì đây là kết quả: 😎
+<img src="/img/post_img/tap-code-01/003.png" alt="Tested cases" /></p>
+
+<p>Cố tình phá hỏng dữ liệu trường hợp thử thứ 6 thành: <code>{ 2.5, 9.0, 8.0, 6.0, 2 },</code> và kết quả mới sẽ là&hellip;
+<img src="/img/post_img/tap-code-01/004.png" alt="Tested cases failed" /></p>
+
+<p>👌 Quá hay phải không, nếu mỗi lần sửa đổi hàm <code>danh_gia()</code> (có thể sẽ dẫn đến sai, mà đa phần là không biết sai ở đâu) thì chỉ cần gọi hàm <code>kiem_tra()</code> một lần, ta sẽ biết được trường hợp nào sai, từ đó dễ dàng khoanh vùng để tìm lỗi hơn là mỗi kiểm tra phải nhập đi nhập lại.</p>
+
+<h1 id="kết-luận">Kết luận</h1>
+
+<ol>
+<li>Lời chào cao hơn mâm cỗ, chạy Hello world trước khi bắt đầu công việc.</li>
+<li>Kiểm tra dữ liệu có hợp lệ hay không trước khi xử lí dữ liệu.</li>
+<li>Thiết kế bộ thử song song việc phát triển một chức năng nào đó.</li>
+</ol>
+
+<p><em>Chúc các bạn code tốt và code vui, hôm nay trời có nhiều mây</em> ☁️ <em>mình lại hết xèng</em> 💸 <em>nhịn đói</em> 😿 <em>viết bài lởm dởm chắc ai đó sẽ sai sót, mong được góp ý. Cảm ơn bạn đã nghé qua.</em></p>
+
+<p>🍀 ngbaanh 🍀</p>
+
+<hr />
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://ngbaanh.github.io/post/widgets/"><span
+      aria-hidden="true">&larr;</span> Customizing the homepage with widgets</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div class="panel panel-default">
+    <div class="panel-heading"><strong>COMMENTS</strong></div>
+    <div class="panel-body">
+      <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ngbaanh-github-io';
+    var disqus_identifier = 'https:\/\/ngbaanh.github.io\/post\/tap-code--viet-ham-xep-loai-hoc-sinh\/';
+    var disqus_title = '☘Tập Code: Viết hàm xếp loại học sinh';
+    var disqus_url = 'https:\/\/ngbaanh.github.io\/post\/tap-code--viet-ham-xep-loai-hoc-sinh\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Bá Anh Nguyễn &middot; 
+    
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93752719-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

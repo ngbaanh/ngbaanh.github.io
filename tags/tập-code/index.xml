@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tập Code on Bá Anh Nguyễn</title>
+    <link>https://ngbaanh.github.io/tags/t%E1%BA%ADp-code/index.xml</link>
+    <description>Recent content in Tập Code on Bá Anh Nguyễn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
+    <atom:link href="/tags/t%E1%BA%ADp-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>☘Tập Code: Viết hàm xếp loại học sinh</title>
+      <link>https://ngbaanh.github.io/post/tap-code--viet-ham-xep-loai-hoc-sinh/</link>
+      <pubDate>Sun, 19 Mar 2017 11:34:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/post/tap-code--viet-ham-xep-loai-hoc-sinh/</guid>
+      <description>
+
+&lt;h1 id=&#34;đặt-vấn-đề&#34;&gt;Đặt vấn đề&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Hôm nay cuối tuần rảnh rỗi nên viết bài đầu tiên về Series Tập Code, đến bây giờ cũng code được một vài năm bây giờ nhớ lại những bài toán năm xưa tuy đơn giản nhưng làm mình bối rối khôn cùng.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Cùng xem chi tiết bài toán nhé.&lt;/p&gt;
+
+&lt;p&gt;Điều kiện đánh giá và xếp loại học sinh như sau:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Học sinh thi 3 môn Toán, Lý, Hoá được đánh giá &lt;code&gt;học lực&lt;/code&gt; trên thang điểm &lt;code&gt;10&lt;/code&gt;. Thang xếp loại học lực từ cao đến thấp thứ tự như sau: &lt;code&gt;Giỏi, Khá, Trung Bình, Yếu&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Học sinh cũng được đánh giá &lt;code&gt;rèn luyện&lt;/code&gt; trên thang điểm &lt;code&gt;10&lt;/code&gt;. Thang xếp loại tương tự thang xếp loại học lực: &lt;code&gt;Tốt, Khá, Trung Bình, Yếu&lt;/code&gt;. Xếp loại phải tương ứng với năng lực.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Điểm trung bình chung nhỏ hơn 5.0 thì &lt;code&gt;xếp loại ban đầu&lt;/code&gt; &lt;em&gt;Yếu&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Điểm trung bình chung từ 5.0 đến dưới 6.5 thì xếp loại ban đầu &lt;em&gt;Trung Bình&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Điểm trung bình chung từ 6.5 đến dưới 8.0 thì xếp loại ban đầu &lt;em&gt;Khá&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Điểm trung bình chung từ 8.0 trở lên thì xếp loại ban đầu &lt;em&gt;Giỏi&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Học sinh &lt;code&gt;xếp loại ban đầu&lt;/code&gt; &lt;em&gt;Khá, Giỏi&lt;/em&gt; chỉ khi có điểm rèn luyện tương đương và điểm thành phần 3 môn có xếp loại tương ứng từ &lt;em&gt;Trung Bình, Khá&lt;/em&gt; trở lên. Nếu không thì giảm một bậc.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trong các điểm thành phần, nếu có bất kì điểm nào nhỏ hơn 3.0, thì lập tức &lt;code&gt;xếp loại&lt;/code&gt; Yếu.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Yêu cầu&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Viết một hàm đánh giá bằng ngôn ngữ C, đầu vào điểm thi 3 môn và điểm rèn luyện, đầu ra là một chuỗi đánh giá xếp loại thuộc bộ &lt;code&gt;{4, 3, 2, 1, 0}&lt;/code&gt; tương ứng thang xếp loại trong đề bài và &lt;code&gt;0&lt;/code&gt; là không đánh giá được.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bài toán ai cũng biết, đã làm lập trình tất cả đều đã làm qua nhưng mà mình vẫn thấy nó có ích nên viết lại. Để ngắn gọn thì những điểm cần lưu ý mình đã đánh dấu nổi bật ngay trong đề bài bên trên. Lưu ý ngôn ngữ C ở đây  là &lt;code&gt;Standard C&lt;/code&gt; chứ không phải C++ hoặc C# nhé (vì lúc viết bài này máy mình chỉ có C thôi).&lt;/p&gt;
+
+&lt;p&gt;Sau khi đọc xong đề bài thì lập tức tất cả đều có thể hình dung ra nguyên mẫu hàm như sau, dòm qua để nhảy sang phần sau nhé.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;chuẩn-bị-những-gì-để-bắt-đầu&#34;&gt;Chuẩn bị những gì để bắt đầu&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Với những bạn sử dụng Windows thì có thể dùng bất kì cái gì đó code C được như DevCpp, hoặc CodeBlock hay gì gì đó khác là ok rồi. Mình chia tay Windows rồi thì sử dụng Terminal thay thế vậy, máy mình cũng chẳng cài gì nên chỉ có ngôn ngữ C là làm được trực tiếp mà thôi.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Trước tiên chúng ta di chuyển đến đâu đó trong máy tính, tạo một thư mục để chứa tệp mã nguồn. Ở đây mình sẽ tạo ngay giữa &lt;code&gt;Desktop&lt;/code&gt; một thư mục &lt;code&gt;tap-code&lt;/code&gt;, sau đó tạo tệp &lt;code&gt;main.c&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ cd ~/Desktop/
+$ mkdir tap-code &amp;amp;&amp;amp; cd tap-code
+$ touch main.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mở nó ra và chiến thôi, tuỳ các bạn muốn mở nó trong IDE hay Notepad, còn nếu ai đó nhác như mình thì xử lí ngay tại cái Terminal với &lt;code&gt;nano&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ nano main.c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;center&gt;
+&lt;div class=&#34;embed video-player&#34;&gt;
+  &lt;iframe
+    class   = &#34;youtube-player&#34;
+    type    = &#34;text/html&#34;
+    width   = &#34;420&#34;
+    height  = &#34;240&#34;
+    src     = &#34;http://www.youtube.com/embed/NpVeCllju3Q?showinfo=0&amp;amp;rel=0&#34;
+    allowfullscreen
+    rel         = &#34;0&#34;
+    showinfo    = &#34;0&#34;
+    frameborder = &#34;0&#34;&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+
+&lt;p&gt;Phải kiểm tra mọi thứ thực sự ổn trước khi bắt đầu. 😹&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Hồi xưa học cấp 2 lúc đang làm thi thực hành Pascal, vừa đọc đề xong lao vào code no xôi chán chè thì build không được, nguyên nhân là do máy bị xì ke từ sớm, lúc chuyển sang máy khác thì không kịp nữa rồi.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Trước khi bắt tay làm gì phải đảm bảo HelloWorld chạy được, mất có 16 giây thôi các bạn ạ.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h1 id=&#34;quay-lại-giải-quyết-bài-toán&#34;&gt;Quay lại giải quyết bài toán&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Có thể thấy là bài toán này có quá nhiều điều kiện lằng nhằng với nhau, nhưng chúng ta hãy khoan code ngay mà đánh giá nó trước. Phải tập trung xử lí những điều kiện mang tính quyết định trước.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-đầu-tiên-là-hợp-lệ-dữ-liệu&#34;&gt;1. Đầu tiên là hợp lệ dữ liệu&lt;/h2&gt;
+
+&lt;p&gt;Chúng ta phải đảm bảo rằng người ta nhập điểm từ 0.0 ~ 10.0, đầu vào sai mà còn nhây lì tính toán là không được. Cho nên nếu dữ liệu sai thì phải trả về &lt;code&gt;0&lt;/code&gt; ngay lập tức.  😈&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &amp;lt; 0 || ly &amp;lt; 0 || hoa &amp;lt; 0 || rl &amp;lt; 0 || toan &amp;gt; 10 || ly &amp;gt; 10 || hoa &amp;gt; 10 || rl &amp;gt; 10) {
+    return 0; // --KHÔNG ĐÁNH GIÁ ĐƯỢC
+  }
+  // ... CODE NẾU HỢP LỆ
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sau câu lệnh &lt;code&gt;return&lt;/code&gt; không một dòng code nào được thực thi nữa, cho nên lúc này ta có thể viết tiếp mà không cần cụm &lt;code&gt;else { ... }&lt;/code&gt; nữa. Viết xuống bên dưới.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-điều-kiện-loại-bỏ-những-sự-thật-hiển-nhiên&#34;&gt;2. Điều kiện loại bỏ, những sự thật hiển nhiên&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip; Xếp loại phải tương ứng với năng lực.
+Trong các điểm thành phần, nếu có bất kì điểm nào nhỏ hơn 3.0, thì lập tức xếp loại Yếu.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Đây là trường hợp thấy xếp loại ngay mà không cần tính toán, 😌 viết tiếp xuống bên dưới:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &amp;lt; 0 || ly &amp;lt; 0 || hoa &amp;lt; 0 || rl &amp;lt; 0 || toan &amp;gt; 10 || ly &amp;gt; 10 || hoa &amp;gt; 10 || rl &amp;gt; 10) {
+    return 0; // --KHÔNG ĐÁNH GIÁ ĐƯỢC
+  }
+  if (toan &amp;lt; 3 || ly &amp;lt; 3 || hoa &amp;lt; 3 || rl &amp;lt; 5) { return 1; } // --YẾU
+  // ... CODE NẾU CẦN TÍNH TOÁN
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-xác-định-xếp-loại-ban-đầu&#34;&gt;3. Xác định xếp loại ban đầu&lt;/h2&gt;
+
+&lt;p&gt;Cần tính điểm trung bình chung của 3 môn học mới xét tiếp được.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE NẾU CẦN TÍNH TOÁN
+  float tb = (toan + ly + hoa) / 3;
+  int xep_loai = tb &amp;lt; 5.0 ? 1 : (tb &amp;lt; 6.5 ? 2 : (tb &amp;lt; 8.0 ? 3 : 4));
+  // ... CODE SÀNG LỌC
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Đoạn code tính xếp loại ban đầu như trên sử dụng toán tử điều kiện &lt;code&gt;?:&lt;/code&gt; cho ngắn gọn bởi vì mỗi nhánh rẽ ra nó chỉ thực hiện 1 công việc duy nhất là gán dữ liệu. Diễn giải ra thì như thế này, quá dài phải không:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int xep_loai;
+if (tb &amp;lt; 5.0) { xep_loai = 1; }      // --YẾU
+else if (tb &amp;lt; 6.5) { xep_loai = 2; } // --TRUNG BÌNH
+else if (tb &amp;lt; 8.0) { xep_loai = 3; } // --KHÁ
+else { xep_loai = 4; }               // --GIỎI
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-sàng-lọc-xếp-loại&#34;&gt;4. Sàng lọc xếp loại&lt;/h2&gt;
+
+&lt;p&gt;Tiêu chuẩn sàng lọc ở đây chỉ áp dụng cho học sinh &lt;em&gt;Khá&lt;/em&gt; trở lên, gọi là thu gọn nhuệ khí của các anh ấy bớt, để hoà đồng hơn với những đứa học lực trung bình như mình.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Đùa đấy 😂&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Đơn giản là xét cái &lt;code&gt;xep_loai&lt;/code&gt; đã tính được ở ban nãy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE SÀNG LỌC
+  if (xep_loai == 3) { // --NẾU ANH ẤY TIẾN BỘ?
+    if (toan &amp;lt; 5.0 || ly &amp;lt; 5.0 || hoa &amp;lt; 5.0 || rl &amp;lt; 6.5) { // --MỐC HẠ KHÁ-&amp;gt;TB
+      xep_loai--;
+    }
+  }
+  if (xep_loai == 4) { // --NẾU ANH ẤY TIẾN BỘ HƠN?
+    if (toan &amp;lt; 6.5 || ly &amp;lt; 6.5 || hoa &amp;lt; 6.5 || rl &amp;lt; 8.0) { // --MỐC HẠ GIỎI-&amp;gt;KHÁ
+      xep_loai--;
+    }
+  }
+  // ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bạn có thấy 4 lệnh if chồng nhau hơi vô duyên không 😄 rút nó ngắn bớt lại:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int danh_gia(float toan, float ly, float hoa, float rl) { // [ ... ]
+  // ... CODE SÀNG LỌC
+  if (xep_loai == 3 &amp;amp;&amp;amp; (toan &amp;lt; 5.0 || ly &amp;lt; 5.0 || hoa &amp;lt; 5.0 || rl &amp;lt; 6.5)) {
+    xep_loai--;
+  }
+  if (xep_loai == 4 &amp;amp;&amp;amp; (toan &amp;lt; 6.5 || ly &amp;lt; 6.5 || hoa &amp;lt; 6.5 || rl &amp;lt; 8.0)) {
+    xep_loai--;
+  }
+  return xep_loai;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cuối cùng phải trả về kết quả xếp loại, thêm câu lệnh &lt;code&gt;return&lt;/code&gt; vào cuối hàm.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-xây-dựng-bộ-thử&#34;&gt;5. Xây dựng bộ thử&lt;/h2&gt;
+
+&lt;p&gt;Để biết cái mình code có chạy đúng hay không thì cần xây dựng một vài trường hợp thử để kiểm tra.
+Giả sử ta biết chắc một vài trường hợp thì có thể chọn ra để thử. Ví dụ bảng sau:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/002.png&#34; alt=&#34;Test cases&#34; /&gt;
+Dựa vào thông tin trên ta thiết kế một hàm &lt;code&gt;kiem_tra()&lt;/code&gt; để thử xem hàm &lt;code&gt;danh_gia()&lt;/code&gt; có hoạt động đúng như mong đợi hay không.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;void kiem_tra() {
+  const int dong = 9, cot = 5;
+  // -- Dữ liệu: { Toán; Lý; Hoá; Rèn Luyện; Kết Quả Mong Đợi },
+  float data[dong][cot] = {
+    { 11 , 9.0, 9.0, 9.0, 0 },
+    { 9.0, 9.0, 9.0, 9.0, 4 },
+    { 7.0, 7.0, 7.0, 7.0, 3 },
+    { 6.0, 6.0, 6.0, 6.0, 2 },
+    { 3.5, 4.0, 6.0, 6.5, 1 },
+
+    { 2.5, 9.0, 8.0, 6.0, 1 },
+    { 6.0, 9.0, 9.0, 8.0, 3 },
+    { 7.0, 8.0, 9.0, 4.5, 1 },
+    { 4.0, 9.0, 8.0, 6.0, 2 }
+  };
+  int i, ketqua;
+  printf(&amp;quot;==== BAT DAU KIEM TRA =====\n&amp;quot;);
+  for (i = 0; i &amp;lt; dong; i++) {
+    ketqua = danh_gia(data[i][0], data[i][1], data[i][2], data[i][3]);
+    printf(&amp;quot;DanhGia(%2.1f, %2.1f, %2.1f, %2.1f) = %i | %i | %10s.\n&amp;quot;,
+      data[i][0], data[i][1], data[i][2], data[i][3], ketqua,
+      (int)data[i][4],
+      ((int)data[i][4] == ketqua ? &amp;quot;[o]&amp;quot; : &amp;quot;&amp;gt;&amp;gt; [x]&amp;quot;)
+    );
+  }
+  printf(&amp;quot;======== KET THUC =========\n&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Cái mảng 2 chiều đó nên là nạp dữ liệu từ file để tiện đường chỉnh sửa sau này, phạm vi bài viết mình đặt luôn vào đó cho gọn.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;6-tận-hưởng-thành-quả&#34;&gt;6. Tận hưởng thành quả&lt;/h2&gt;
+
+&lt;p&gt;Chúng ta cần phải viết một chương trình hoàn chỉnh để kiểm tra:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int danh_gia(float, float, float, float);
+void kiem_tra();
+
+int main() {
+  //printf(&amp;quot;Hello world \n&amp;quot;);
+  kiem_tra();
+  return 0;
+}
+
+int danh_gia(float toan, float ly, float hoa, float rl) {
+  if (toan &amp;lt; 0 || ly &amp;lt; 0 || hoa &amp;lt; 0 || rl &amp;lt; 0 || toan &amp;gt; 10 || ly &amp;gt; 10 || hoa &amp;gt; 10 || rl &amp;gt; 10) { return 0; }
+  if (toan &amp;lt; 3 || ly &amp;lt; 3 || hoa &amp;lt; 3 || rl &amp;lt; 5) { return 1; } // --YẾU
+  float tb = (toan + ly + hoa) / 3;
+  int xep_loai = tb &amp;lt; 5.0 ? 1 : (tb &amp;lt; 6.5 ? 2 : (tb &amp;lt; 8.0 ? 3 : 4));
+  if (xep_loai == 3 &amp;amp;&amp;amp; (toan &amp;lt; 5.0 || ly &amp;lt; 5.0 || hoa &amp;lt; 5.0 || rl &amp;lt; 6.5)) {
+    xep_loai--; // --HẠ KHÁ &amp;gt; TB
+  }
+  if (xep_loai == 4 &amp;amp;&amp;amp; (toan &amp;lt; 6.5 || ly &amp;lt; 6.5 || hoa &amp;lt; 6.5 || rl &amp;lt; 8.0)) {
+    xep_loai--; // --HẠ GIỎI &amp;gt; KHÁ
+  }
+  return xep_loai;
+}
+
+void kiem_tra() {
+  const int dong = 9, cot = 5;
+  // -- Dữ liệu: { Toán; Lý; Hoá; Rèn Luyện; Kết Quả Mong Đợi },
+  float data[dong][cot] = {
+    { 11 , 9.0, 9.0, 9.0, 0 },
+    { 9.0, 9.0, 9.0, 9.0, 4 },
+    { 7.0, 7.0, 7.0, 7.0, 3 },
+    { 6.0, 6.0, 6.0, 6.0, 2 },
+    { 3.5, 4.0, 6.0, 6.5, 1 },
+
+    { 2.5, 9.0, 8.0, 6.0, 1 },
+    { 6.0, 9.0, 9.0, 8.0, 3 },
+    { 7.0, 8.0, 9.0, 4.5, 1 },
+    { 4.0, 9.0, 8.0, 6.0, 2 }
+  };
+  int i, ketqua;
+  printf(&amp;quot;==== BAT DAU KIEM TRA =====\n&amp;quot;);
+  for (i = 0; i &amp;lt; dong; i++) {
+    ketqua = danh_gia(data[i][0], data[i][1], data[i][2], data[i][3]);
+    printf(&amp;quot;DanhGia(%2.1f, %2.1f, %2.1f, %2.1f) = %i | %i | %10s.\n&amp;quot;,
+      data[i][0], data[i][1], data[i][2], data[i][3], ketqua,
+      (int)data[i][4],
+      ((int)data[i][4] == ketqua ? &amp;quot;[o]&amp;quot; : &amp;quot;&amp;gt;&amp;gt; [x]&amp;quot;)
+    );
+  }
+  printf(&amp;quot;======== KET THUC =========\n&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thực hiện biên dịch và chạy thử chương trình, nếu bạn đang dùng terminal như mình:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ gcc -o main main.c &amp;amp;&amp;amp; ./main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thì đây là kết quả: 😎
+&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/003.png&#34; alt=&#34;Tested cases&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cố tình phá hỏng dữ liệu trường hợp thử thứ 6 thành: &lt;code&gt;{ 2.5, 9.0, 8.0, 6.0, 2 },&lt;/code&gt; và kết quả mới sẽ là&amp;hellip;
+&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/004.png&#34; alt=&#34;Tested cases failed&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;👌 Quá hay phải không, nếu mỗi lần sửa đổi hàm &lt;code&gt;danh_gia()&lt;/code&gt; (có thể sẽ dẫn đến sai, mà đa phần là không biết sai ở đâu) thì chỉ cần gọi hàm &lt;code&gt;kiem_tra()&lt;/code&gt; một lần, ta sẽ biết được trường hợp nào sai, từ đó dễ dàng khoanh vùng để tìm lỗi hơn là mỗi kiểm tra phải nhập đi nhập lại.&lt;/p&gt;
+
+&lt;h1 id=&#34;kết-luận&#34;&gt;Kết luận&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Lời chào cao hơn mâm cỗ, chạy Hello world trước khi bắt đầu công việc.&lt;/li&gt;
+&lt;li&gt;Kiểm tra dữ liệu có hợp lệ hay không trước khi xử lí dữ liệu.&lt;/li&gt;
+&lt;li&gt;Thiết kế bộ thử song song việc phát triển một chức năng nào đó.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Chúc các bạn code tốt và code vui, hôm nay trời có nhiều mây&lt;/em&gt; ☁️ &lt;em&gt;mình lại hết xèng&lt;/em&gt; 💸 &lt;em&gt;nhịn đói&lt;/em&gt; 😿 &lt;em&gt;viết bài lởm dởm chắc ai đó sẽ sai sót, mong được góp ý. Cảm ơn bạn đã nghé qua.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;🍀 ngbaanh 🍀&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
