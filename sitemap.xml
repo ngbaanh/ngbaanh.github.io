@@ -60,22 +60,6 @@
     
     
     <url>
-      <loc>https://ngbaanh.github.io/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>https://ngbaanh.github.io/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>https://ngbaanh.github.io/publication/person-re-identification/</loc>
       <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     </url>
@@ -147,15 +131,6 @@
     <url>
       <loc>https://ngbaanh.github.io/tags/cloud/</loc>
       <lastmod>2017-02-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>https://ngbaanh.github.io/tags/hugo/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

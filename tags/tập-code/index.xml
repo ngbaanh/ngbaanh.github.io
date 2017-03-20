@@ -74,12 +74,6 @@ $ touch main.c
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ nano main.c
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;!--
-[![Hello world](http://img.youtube.com/vi/NpVeCllju3Q/0.jpg)](http://www.youtube.com/watch?v=NpVeCllju3Q &#34;Click to play&#34;)
-
-
---&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/Helloworld.mp4&#34; title=&#34;Click to play HD quality&#34;&gt;&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-01/Helloworld.gif&#34; alt=&#34;Hello world&#34; /&gt;&lt;/a&gt;
 Phải kiểm tra mọi thứ thực sự ổn trước khi bắt đầu. 😹&lt;/p&gt;
 
