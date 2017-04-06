@@ -11,6 +11,156 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>☘Tập Code 2: Vòng lặp vô tận WHILE hay FOR?</title>
+      <link>https://ngbaanh.github.io/post/tap-code-2--vong-lap-vo-tan-while-hay-for/</link>
+      <pubDate>Thu, 06 Apr 2017 20:42:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/post/tap-code-2--vong-lap-vo-tan-while-hay-for/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Vòng lặp, là một trong những điều cơ bản nhất của một tư duy lập trình. Và 2 đại diện kinh điển cho nó chính là for và while. Vậy cụ thể chúng có gì khác nhau và cách tốt nhất để thiết lập một vòng lặp vô tận.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;vòng-lặp-là&#34;&gt;Vòng lặp là&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Khi phải thực hiện những công việc giống nhau, hoặc gần giống nhau, nôm na là lặp đi lặp lại một cái gì đó nhàm chán, thay vì phải sao chép một đống mã y hệt nhau để chia việc làm thì chúng ta cần một cấu trúc nào đó tinh gọn và hiệu quả.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Cách mà một học sinh bình thường chép phạt&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; (994 lần)&lt;/p&gt;
+
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+
+&lt;p&gt;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;Cách mà lập trình viên chép phạt&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;for (int i = 0; i &amp;lt; 1000; i++) printf(&amp;quot;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vậy thì theo hiểu biết móp méo của mình, vòng lặp là &lt;code&gt;luồng điều khiển&lt;/code&gt; cho phép các đoạn mã thực hiện lặp đi lặp lại. Thông thường các vòng lặp đều có 3 thành phần chính: &lt;code&gt;các giá trị khởi tạo&lt;/code&gt;, &lt;code&gt;điều kiện duy trì vòng lặp&lt;/code&gt;, &lt;code&gt;các mã lệnh cần lặp&lt;/code&gt;. Vòng lặp sẽ dừng lại khi không thoả mãn điều kiện duy trì cho nó nữa.&lt;/p&gt;
+
+&lt;p&gt;Có nhiều cấu trúc để thể hiện vòng lặp như &lt;code&gt;for do&lt;/code&gt;, &lt;code&gt;while do&lt;/code&gt;, &lt;code&gt;repeat until&lt;/code&gt;, &lt;code&gt;do while&lt;/code&gt;,&amp;hellip; Nhưng trong phạm vi bài viết này mình chỉ xét đến 2 cái đầu tiên.&lt;/p&gt;
+
+&lt;h1 id=&#34;vòng-lặp-với-for&#34;&gt;Vòng lặp với FOR&lt;/h1&gt;
+
+&lt;p&gt;Hơi ngược thứ tự với tiêu đề chút, bởi vì ví dụ bên trên lỡ dùng FOR nên nói về nó trước.
+Vòng lặp FOR là một vòng lặp cho phép người lập trình áp dụng đầy đủ các thành phần đã nêu bên trên. Ngoài ra nó còn có thêm 1 &lt;code&gt;biểu_thức&lt;/code&gt; là nơi để tính toán sau khi mỗi vòng lặp hoàn thành.&lt;/p&gt;
+
+&lt;p&gt;Thông thường sẽ có cấu trúc (với các ngôn ngữ thuộc họ C)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;for (các_giá_trị_khởi_tạo; điều_kiện; biểu_thức) {
+  mã_lệnh_cần_thực_thi;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ngoài ra nó còn có 1 biến thể khác gọi là &lt;code&gt;for each&lt;/code&gt;, dành cho các công việc như duyệt 1 chiều từ đầu đến cuối 1 chuỗi, &lt;code&gt;biểu_thức&lt;/code&gt; không thực sự quá cần thiết.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ: Cho x=0, y=0. Lặp 10 lần, cứ mỗi lần thì tăng x lên 2, y lên 3.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int i, x, y, dx, dy;
+for (i = 0, x = 0, y = 0, dx = 2, dy = 3; i &amp;lt; 10; i++) {
+  x = x + dx;
+  y = y + dy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Và khi thiếu khuyết các yếu tố thì vòng for vẫn chạy bình thường. Đoạn mã sau tương đương đoạn bên trên.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int i = 0, x = 0, y = 0, dx = 2, dy = 3;
+for (; i &amp;lt; 10;) {
+  x = x + dx;
+  y = y + dy;
+  i++;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Chú ý là có thể vứt gì đó cũng được nhưng mà không được vứt dấu &lt;code&gt;;&lt;/code&gt; nhé.&lt;/p&gt;
+
+&lt;h1 id=&#34;vòng-lặp-với-while&#34;&gt;Vòng lặp với WHILE&lt;/h1&gt;
+
+&lt;p&gt;Hơi khác một chút với for. Thông thường thì vòng lặp &lt;code&gt;for&lt;/code&gt; sẽ biết trước được trước số lần lặp (mặc dù vẫn có vài trường hợp cá biệt ra), còn vòng lặp &lt;code&gt;while&lt;/code&gt; chắc chắn sẽ không biết trước nó lặp bao nhiêu lần cả, và nó chỉ có 1 điều kiện đầu vào mà thôi, thiếu nó thì không được, nó sẽ lặp cho đến khi nào điều kiện không thoả mãn nữa thì dừng. &lt;code&gt;for&lt;/code&gt; vẫn dễ tính hơn &lt;code&gt;while&lt;/code&gt; nhỉ!&lt;/p&gt;
+
+&lt;p&gt;Cấu trúc:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;while (điều_kiện) {
+  mã_lệnh_cần_thực_thi;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lấy lại ví dụ bên trên, ta có cách biểu diễn với &lt;code&gt;while&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int i = 10, x = 0, y = 0, dx = 2, dy = 3;
+while (i &amp;gt; 0) {
+  x = x + dx;
+  y = y + dy;
+  i--;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;vòng-lặp-vô-tận&#34;&gt;Vòng lặp vô tận&lt;/h1&gt;
+
+&lt;p&gt;Có những lúc chúng ta cần một đoạn mã chạy đi chạy lại mà không cần dừng (ví dụ cần duy trì kết nối chẳng hạn), thì chỉ cần làm cho vòng lặp luôn thoả mãn điều kiện lặp. Lúc này cách duy nhất để thoát ra từ bên trong là sử dụng từ khoá &lt;code&gt;break&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cả &lt;code&gt;for&lt;/code&gt; và &lt;code&gt;while&lt;/code&gt; đều làm được điều này. Bài viết đang sử dụng ngôn ngữ C làm chuẩn, thì ta có như sau:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;for (;;) {
+  mã_lệnh_cần_thực_thi;
+}
+
+while (1) {
+  mã_lệnh_cần_thực_thi;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Chú ý: Làm việc với thể loại này cần hết sức cẩn thận, bởi vì không có điều kiện cho nó dừng nên hoặc là nó sẽ tàn phá dữ liệu của bạn, hoặc là gây ngập bộ nhớ hoặc một số hậu quả khác.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Code &amp;lsquo;thông minh&amp;rsquo;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// ...
+for(;;);
+// ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;cái-nào-tốt-hơn&#34;&gt;Cái nào tốt hơn?&lt;/h1&gt;
+
+&lt;p&gt;Mình dám cá là khoảng 80% coder sẽ chọn cách thứ 2 bên trên, tức là dùng &lt;code&gt;while&lt;/code&gt;.
+Lí do? Đơn giản là nhìn cách đầu tiên quá kì cục, không dễ hiểu bằng cách thứ 2.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Mình cũng từng ở trong 80% này và bây giờ đã nhảy qua 20% còn lại.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lí do? Là bởi vì cái cách mà trình biên dịch đối xử với mệnh đề điều kiện trong dấu &lt;code&gt;()&lt;/code&gt;.
+Và dễ dàng thấy đoạn code trên trong &lt;code&gt;C&lt;/code&gt; thì đúng, nhưng trong &lt;code&gt;C++&lt;/code&gt; và &lt;code&gt;Java&lt;/code&gt; và một số ngôn ngữ khác nữa sẽ phải là &lt;code&gt;while(true)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Trong khi đó nếu sử dụng &lt;code&gt;for(;;)&lt;/code&gt; thì mọi chuyện sẽ đều êm đẹp, không cần phải phân vân nhiều.
+Với lại &lt;code&gt;while(1)&lt;/code&gt; sẽ giống &lt;code&gt;while(10)&lt;/code&gt;, giả sử có một đoạn code &lt;code&gt;while(12345) { ... }&lt;/code&gt; thì sao, vẫn đúng nhưng gây ức chế cho người nào bảo trì nó.&lt;/p&gt;
+
+&lt;p&gt;Cũng bởi vì giống nhau trong nhiều ngôn ngữ lập trình, nên &lt;code&gt;for(;;)&lt;/code&gt; gần như biến thành một &lt;code&gt;từ khoá&lt;/code&gt;. Như vậy code trong sẽ xinh xắn hơn nhiều.&lt;/p&gt;
+
+&lt;p&gt;Cá nhân mình, từng sử dụng while và bây giờ đã nhảy sang for. Còn bạn, bạn đã đổi qua chưa?&lt;/p&gt;
+
+&lt;p&gt;🍀 ngbaanh 🍀&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
       <title>☘Tập Code: Viết hàm xếp loại học sinh</title>
       <link>https://ngbaanh.github.io/post/tap-code--viet-ham-xep-loai-hoc-sinh/</link>
       <pubDate>Sun, 19 Mar 2017 11:34:00 +0000</pubDate>

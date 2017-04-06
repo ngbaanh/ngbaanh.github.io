@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.19" />
+  <meta name="author" content="Bá Anh Nguyễn">
+  <meta name="description" content="Junior Developer">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora|Roboto+Mono"> 
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="https://ngbaanh.github.io/index.xml" type="application/rss+xml" title="Bá Anh Nguyễn">
+  <link rel="feed" href="https://ngbaanh.github.io/index.xml" type="application/rss+xml" title="Bá Anh Nguyễn">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://ngbaanh.github.io/post/tap-code-2--vong-lap-vo-tan-while-hay-for/">
+
+  
+
+  <title>☘Tập Code 2: Vòng lặp vô tận WHILE hay FOR? | Bá Anh Nguyễn</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Bá Anh Nguyễn</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">☘Tập Code 2: Vòng lặp vô tận WHILE hay FOR?</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-04-06 20:42:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Apr 6, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/t%e1%ba%adp-code">tập code</a
+    >, 
+    
+    <a href="/tags/c">C</a
+    >, 
+    
+    <a href="/tags/practice-code">practice code</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code-2--vong-lap-vo-tan-while-hay-for%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%e2%98%98T%e1%ba%adp%20Code%202%3a%20V%c3%b2ng%20l%e1%ba%b7p%20v%c3%b4%20t%e1%ba%adn%20WHILE%20hay%20FOR%3f&amp;url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code-2--vong-lap-vo-tan-while-hay-for%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code-2--vong-lap-vo-tan-while-hay-for%2f&amp;title=%e2%98%98T%e1%ba%adp%20Code%202%3a%20V%c3%b2ng%20l%e1%ba%b7p%20v%c3%b4%20t%e1%ba%adn%20WHILE%20hay%20FOR%3f"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code-2--vong-lap-vo-tan-while-hay-for%2f&amp;title=%e2%98%98T%e1%ba%adp%20Code%202%3a%20V%c3%b2ng%20l%e1%ba%b7p%20v%c3%b4%20t%e1%ba%adn%20WHILE%20hay%20FOR%3f"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%e2%98%98T%e1%ba%adp%20Code%202%3a%20V%c3%b2ng%20l%e1%ba%b7p%20v%c3%b4%20t%e1%ba%adn%20WHILE%20hay%20FOR%3f&amp;body=https%3a%2f%2fngbaanh.github.io%2fpost%2ftap-code-2--vong-lap-vo-tan-while-hay-for%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p><em>Vòng lặp, là một trong những điều cơ bản nhất của một tư duy lập trình. Và 2 đại diện kinh điển cho nó chính là for và while. Vậy cụ thể chúng có gì khác nhau và cách tốt nhất để thiết lập một vòng lặp vô tận.</em></p>
+
+<h1 id="vòng-lặp-là">Vòng lặp là&hellip;</h1>
+
+<p>Khi phải thực hiện những công việc giống nhau, hoặc gần giống nhau, nôm na là lặp đi lặp lại một cái gì đó nhàm chán, thay vì phải sao chép một đống mã y hệt nhau để chia việc làm thì chúng ta cần một cấu trúc nào đó tinh gọn và hiệu quả.</p>
+
+<p><code>Cách mà một học sinh bình thường chép phạt</code></p>
+
+<blockquote>
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+
+<p>&hellip; (994 lần)</p>
+
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+
+<p>Em xin hứa sẽ không nói chuyện riêng trong lớp nữa.</p>
+</blockquote>
+
+<p><code>Cách mà lập trình viên chép phạt</code></p>
+
+<pre><code class="language-c">for (int i = 0; i &lt; 1000; i++) printf(&quot;Em xin hứa sẽ không nói chuyện riêng trong lớp nữa&quot;);
+</code></pre>
+
+<p>Vậy thì theo hiểu biết móp méo của mình, vòng lặp là <code>luồng điều khiển</code> cho phép các đoạn mã thực hiện lặp đi lặp lại. Thông thường các vòng lặp đều có 3 thành phần chính: <code>các giá trị khởi tạo</code>, <code>điều kiện duy trì vòng lặp</code>, <code>các mã lệnh cần lặp</code>. Vòng lặp sẽ dừng lại khi không thoả mãn điều kiện duy trì cho nó nữa.</p>
+
+<p>Có nhiều cấu trúc để thể hiện vòng lặp như <code>for do</code>, <code>while do</code>, <code>repeat until</code>, <code>do while</code>,&hellip; Nhưng trong phạm vi bài viết này mình chỉ xét đến 2 cái đầu tiên.</p>
+
+<h1 id="vòng-lặp-với-for">Vòng lặp với FOR</h1>
+
+<p>Hơi ngược thứ tự với tiêu đề chút, bởi vì ví dụ bên trên lỡ dùng FOR nên nói về nó trước.
+Vòng lặp FOR là một vòng lặp cho phép người lập trình áp dụng đầy đủ các thành phần đã nêu bên trên. Ngoài ra nó còn có thêm 1 <code>biểu_thức</code> là nơi để tính toán sau khi mỗi vòng lặp hoàn thành.</p>
+
+<p>Thông thường sẽ có cấu trúc (với các ngôn ngữ thuộc họ C)</p>
+
+<pre><code class="language-c">for (các_giá_trị_khởi_tạo; điều_kiện; biểu_thức) {
+  mã_lệnh_cần_thực_thi;
+}
+</code></pre>
+
+<p>Ngoài ra nó còn có 1 biến thể khác gọi là <code>for each</code>, dành cho các công việc như duyệt 1 chiều từ đầu đến cuối 1 chuỗi, <code>biểu_thức</code> không thực sự quá cần thiết.</p>
+
+<p>Ví dụ: Cho x=0, y=0. Lặp 10 lần, cứ mỗi lần thì tăng x lên 2, y lên 3.</p>
+
+<pre><code class="language-c">int i, x, y, dx, dy;
+for (i = 0, x = 0, y = 0, dx = 2, dy = 3; i &lt; 10; i++) {
+  x = x + dx;
+  y = y + dy;
+}
+</code></pre>
+
+<p>Và khi thiếu khuyết các yếu tố thì vòng for vẫn chạy bình thường. Đoạn mã sau tương đương đoạn bên trên.</p>
+
+<pre><code class="language-c">int i = 0, x = 0, y = 0, dx = 2, dy = 3;
+for (; i &lt; 10;) {
+  x = x + dx;
+  y = y + dy;
+  i++;
+}
+</code></pre>
+
+<p>Chú ý là có thể vứt gì đó cũng được nhưng mà không được vứt dấu <code>;</code> nhé.</p>
+
+<h1 id="vòng-lặp-với-while">Vòng lặp với WHILE</h1>
+
+<p>Hơi khác một chút với for. Thông thường thì vòng lặp <code>for</code> sẽ biết trước được trước số lần lặp (mặc dù vẫn có vài trường hợp cá biệt ra), còn vòng lặp <code>while</code> chắc chắn sẽ không biết trước nó lặp bao nhiêu lần cả, và nó chỉ có 1 điều kiện đầu vào mà thôi, thiếu nó thì không được, nó sẽ lặp cho đến khi nào điều kiện không thoả mãn nữa thì dừng. <code>for</code> vẫn dễ tính hơn <code>while</code> nhỉ!</p>
+
+<p>Cấu trúc:</p>
+
+<pre><code class="language-c">while (điều_kiện) {
+  mã_lệnh_cần_thực_thi;
+}
+</code></pre>
+
+<p>Lấy lại ví dụ bên trên, ta có cách biểu diễn với <code>while</code>:</p>
+
+<pre><code class="language-c">int i = 10, x = 0, y = 0, dx = 2, dy = 3;
+while (i &gt; 0) {
+  x = x + dx;
+  y = y + dy;
+  i--;
+}
+</code></pre>
+
+<h1 id="vòng-lặp-vô-tận">Vòng lặp vô tận</h1>
+
+<p>Có những lúc chúng ta cần một đoạn mã chạy đi chạy lại mà không cần dừng (ví dụ cần duy trì kết nối chẳng hạn), thì chỉ cần làm cho vòng lặp luôn thoả mãn điều kiện lặp. Lúc này cách duy nhất để thoát ra từ bên trong là sử dụng từ khoá <code>break</code></p>
+
+<p>Cả <code>for</code> và <code>while</code> đều làm được điều này. Bài viết đang sử dụng ngôn ngữ C làm chuẩn, thì ta có như sau:</p>
+
+<pre><code class="language-c">for (;;) {
+  mã_lệnh_cần_thực_thi;
+}
+
+while (1) {
+  mã_lệnh_cần_thực_thi;
+}
+</code></pre>
+
+<div class="alert alert-warning">
+  <p>Chú ý: Làm việc với thể loại này cần hết sức cẩn thận, bởi vì không có điều kiện cho nó dừng nên hoặc là nó sẽ tàn phá dữ liệu của bạn, hoặc là gây ngập bộ nhớ hoặc một số hậu quả khác.</p>
+
+</div>
+
+
+<p>Code &lsquo;thông minh&rsquo;:</p>
+
+<pre><code class="language-c">// ...
+for(;;);
+// ...
+</code></pre>
+
+<h1 id="cái-nào-tốt-hơn">Cái nào tốt hơn?</h1>
+
+<p>Mình dám cá là khoảng 80% coder sẽ chọn cách thứ 2 bên trên, tức là dùng <code>while</code>.
+Lí do? Đơn giản là nhìn cách đầu tiên quá kì cục, không dễ hiểu bằng cách thứ 2.</p>
+
+<blockquote>
+<p>Mình cũng từng ở trong 80% này và bây giờ đã nhảy qua 20% còn lại.</p>
+</blockquote>
+
+<p>Lí do? Là bởi vì cái cách mà trình biên dịch đối xử với mệnh đề điều kiện trong dấu <code>()</code>.
+Và dễ dàng thấy đoạn code trên trong <code>C</code> thì đúng, nhưng trong <code>C++</code> và <code>Java</code> và một số ngôn ngữ khác nữa sẽ phải là <code>while(true)</code></p>
+
+<p>Trong khi đó nếu sử dụng <code>for(;;)</code> thì mọi chuyện sẽ đều êm đẹp, không cần phải phân vân nhiều.
+Với lại <code>while(1)</code> sẽ giống <code>while(10)</code>, giả sử có một đoạn code <code>while(12345) { ... }</code> thì sao, vẫn đúng nhưng gây ức chế cho người nào bảo trì nó.</p>
+
+<p>Cũng bởi vì giống nhau trong nhiều ngôn ngữ lập trình, nên <code>for(;;)</code> gần như biến thành một <code>từ khoá</code>. Như vậy code trong sẽ xinh xắn hơn nhiều.</p>
+
+<p>Cá nhân mình, từng sử dụng while và bây giờ đã nhảy sang for. Còn bạn, bạn đã đổi qua chưa?</p>
+
+<p>🍀 ngbaanh 🍀</p>
+
+<hr />
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://ngbaanh.github.io/post/tap-code--viet-ham-xep-loai-hoc-sinh/"><span
+      aria-hidden="true">&larr;</span> ☘Tập Code: Viết hàm xếp loại học sinh</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div class="panel panel-default">
+    <div class="panel-heading"><strong>COMMENTS</strong></div>
+    <div class="panel-body">
+      <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ngbaanh-github-io';
+    var disqus_identifier = 'https:\/\/ngbaanh.github.io\/post\/tap-code-2--vong-lap-vo-tan-while-hay-for\/';
+    var disqus_title = '☘Tập Code 2: Vòng lặp vô tận WHILE hay FOR?';
+    var disqus_url = 'https:\/\/ngbaanh.github.io\/post\/tap-code-2--vong-lap-vo-tan-while-hay-for\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Bá Anh Nguyễn &middot; 
+    
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-93752719-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
