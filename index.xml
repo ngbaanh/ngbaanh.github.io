@@ -248,9 +248,9 @@ public class Main {
 	at Main.main(Main.java:15)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Do &lt;code&gt;baAnh.lop&lt;/code&gt; chưa được khởi tạo nên dẽ dính &lt;code&gt;null&lt;/code&gt; sẽ bị lỗi. Giải pháp nghĩ đến đầu tiên là kiểm tra khác null trước khi so sánh.&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;baAnh.lop.tenLop&lt;/code&gt; chưa được khởi tạo nên dẽ dính &lt;code&gt;null&lt;/code&gt; sẽ bị lỗi. Giải pháp nghĩ đến đầu tiên là kiểm tra khác null trước khi so sánh.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (baAnh.lop != null &amp;amp;&amp;amp; baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { ... }
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (baAnh.lop.tenLop != null &amp;amp;&amp;amp; baAnh.lop.tenLop.equals(&amp;quot;CNTT&amp;quot;)) { ... }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Và nó đã chạy:&lt;/p&gt;
@@ -260,7 +260,7 @@ public class Main {
 
 &lt;p&gt;May quá mới so sánh 1 thằng, lỡ so sánh vài thằng thì đúng là vêu mồm tập 2 😭, giải pháp cực kì đơn giản là đảo vị trí của 2 cái cho nhau, như thế này:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (&amp;quot;CNTT&amp;quot;.equals(baAnh.lop)) { ... }
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (&amp;quot;CNTT&amp;quot;.equals(baAnh.lop.tenLop)) { ... }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cho ra kết quả tương tự:&lt;/p&gt;
