@@ -195,6 +195,12 @@ if (a * 2 &amp;gt; 100) {
 
 &lt;p&gt;Vâng, &lt;code&gt;400 &amp;lt;= 100&lt;/code&gt; chỉ vì nó tràn kiểu dữ liệu &lt;code&gt;char&lt;/code&gt; (tối đa 255 nên 2 * 200 = -112, và máy nó hiểu -112 &amp;lt;= 100 là đúng).&lt;/p&gt;
 
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Đặt phép tính vào lúc so sánh, là hành động bóp d*i thằng debugger, chiêu thức này ẩn chứa nguy hiểm tiềm tàng có thể dẫn đến vô sinh xin các bạn cẩn thận.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
 &lt;h1 id=&#34;4-so-sánh-x-0-hay-0-x&#34;&gt;4. So sánh: x == 0 hay 0 == x?&lt;/h1&gt;
 
 &lt;p&gt;Lúc đi học thì gần như 100% người học đều được dạy rằng muốn so sánh A với một hằng B thì cứ nhất nhất là bên trái là A, bên phải là B. Nhưng mà với kiểu dữ liệu tham chiếu, liên quan đến con trỏ và đối tượng thì đây mới là vấn đề.&lt;/p&gt;
