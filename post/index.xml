@@ -223,8 +223,10 @@ class Lop {
 public class Main {
 	public static void main(String[] args) {
 		HocSinh baAnh = new HocSinh();
+    Lop lop = new Lop();
+    baAnh.lop = lop;
 
-		if (baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { // So sánh
+    if (baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { // So sánh
 			System.out.print(&amp;quot;Học lớp CNTT&amp;quot;);
 		} else {
 			System.out.print(&amp;quot;Không học lớp CNTT&amp;quot;);
