@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Bá Anh Nguyễn</title>
+    <link>https://ngbaanh.github.io/tags/java/index.xml</link>
+    <description>Recent content in Java on Bá Anh Nguyễn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
+    <atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>☘Tập Code 3: Tỉnh táo với phép so sánh khi lập trình</title>
+      <link>https://ngbaanh.github.io/post/tap-code-3--tinh-tao-voi-phep-so-sanh-khi-lap-trinh/</link>
+      <pubDate>Sat, 08 Apr 2017 23:15:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/post/tap-code-3--tinh-tao-voi-phep-so-sanh-khi-lap-trinh/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Chú ý: Các vấn đề đang bàn luận chỉ xét trong phạm vi ngôn ngữ&lt;/em&gt; &lt;code&gt;C&lt;/code&gt;, &lt;code&gt;C++&lt;/code&gt; &lt;em&gt;và&lt;/em&gt; &lt;code&gt;Java&lt;/code&gt;. &lt;em&gt;Các ngôn ngữ khác sẽ có những đặc trưng riêng có thể không giống với những gì bên dưới&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-so-sánh-hai-chuỗi&#34;&gt;1. So sánh hai chuỗi&lt;/h1&gt;
+
+&lt;p&gt;Và đây là lỗi mà đa số các bạn mới học &lt;code&gt;C&lt;/code&gt; hoặc &lt;code&gt;Java&lt;/code&gt; mắc phải:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;if (string1 == string2) {
+  // làm gì đó
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cảm quan thì &amp;lsquo;có vẻ&amp;rsquo; đúng lắm nhưng tiếc là không đúng với ý tưởng người tạo ra ngôn ngữ. Nguyên nhân sâu xa thì mình không biết nhưng mà chỉ nhớ phải theo các quy tắc của người ta.
+Với C/C++:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;if ( strcmp(string1, string2) == 0 ) {
+  // làm gì đó
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ở đây &lt;code&gt;strcmp&lt;/code&gt; là viết tắt của &lt;code&gt;string comparison&lt;/code&gt;, thuộc &lt;code&gt;string.h&lt;/code&gt;, có chức năng so sánh hai chuỗi theo thứ tự chữ cái trong từ điển. Giá trị trả về &lt;code&gt;0&lt;/code&gt; cho biết 2 chuỗi bằng nhau, giá trị trả về &lt;code&gt;âm&lt;/code&gt; thì &lt;code&gt;string1&lt;/code&gt; ở trước &lt;code&gt;string2&lt;/code&gt;, giá trị trả về &lt;code&gt;dương&lt;/code&gt; thì &lt;code&gt;string1&lt;/code&gt; ở sau &lt;code&gt;string2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Còn với Java:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;if ( string1.equals(string2) ) {
+  // làm gì đó
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Với Java thì nó đơn giản dễ hiểu hơn nhiều, còn với C thì ta cần quay lại một chút. Xem ví dụ bên dưới:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;#include &amp;lt;string.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+
+void so_sanh(const char* chuoi_1, const char* chuoi_2) {
+    int gia_tri = strcmp(chuoi_1, chuoi_2);
+    printf(&amp;quot;gia_tri = %d \n&amp;quot;, gia_tri);
+    if (gia_tri == 0) {
+      printf(&amp;quot;&#39;%s&#39; BANG &#39;%s&#39; \n&amp;quot;, chuoi_1, chuoi_2);
+    } else if (gia_tri &amp;lt; 0) {
+      printf(&amp;quot;&#39;%s&#39; NHO HON &#39;%s&#39; \n&amp;quot;, chuoi_1, chuoi_2);  
+    } else if(gia_tri &amp;gt; 0) {
+      printf(&amp;quot;&#39;%s&#39; LON HON &#39;%s&#39; \n&amp;quot;, chuoi_1, chuoi_2);
+    }
+    printf(&amp;quot;-------------\n\n&amp;quot;);
+}
+
+int main() {
+    const char* chuoi = &amp;quot;Xin chao&amp;quot;;
+    so_sanh(chuoi, &amp;quot;Xin chao!&amp;quot;); // co them dau &#39;!&#39;
+    so_sanh(chuoi, &amp;quot;Xin chao&amp;quot;);
+    so_sanh(chuoi, &amp;quot;Xin chao ban&amp;quot;);
+    so_sanh(chuoi, &amp;quot;Chao&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kết quả là:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gia_tri = -33
+&#39;Xin chao&#39; NHO HON &#39;Xin chao!&#39;
+-------------
+
+gia_tri = 0
+&#39;Xin chao&#39; BANG &#39;Xin chao&#39;
+-------------
+
+gia_tri = -32
+&#39;Xin chao&#39; NHO HON &#39;Xin chao ban&#39;
+-------------
+
+gia_tri = 21
+&#39;Xin chao&#39; LON HON &#39;Chao&#39;
+-------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rõ rồi nhưng mà cái &lt;code&gt;gia_tri&lt;/code&gt; là cái gì mà mỗi lần so sánh nó lại ra một số khác nhau thế? Để kiểm tra lại nó cụ thể là cái gì thì có thể sửa lại trong hàm &lt;code&gt;so_sanh&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;// ...
+#include &amp;lt;stdlib.h&amp;gt;
+
+void so_sanh(const char* chuoi_1, const char* chuoi_2) {
+    int gia_tri = strcmp(chuoi_1, chuoi_2);
+    printf(&amp;quot;gia_tri = %d ---&amp;gt; &#39;%c&#39; \n&amp;quot;, gia_tri, abs(gia_tri));
+    //...
+}
+//...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kết quả là:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;gia_tri = -33 ---&amp;gt; &#39;!&#39;
+&#39;Xin chao&#39; NHO HON &#39;Xin chao!&#39;
+-------------
+
+gia_tri = 0 ---&amp;gt; &#39;&#39;
+&#39;Xin chao&#39; BANG &#39;Xin chao&#39;
+-------------
+
+gia_tri = -32 ---&amp;gt; &#39; &#39;
+&#39;Xin chao&#39; NHO HON &#39;Xin chao ban&#39;
+-------------
+
+gia_tri = 21 ---&amp;gt; &#39;&#39;
+&#39;Xin chao&#39; LON HON &#39;Chao&#39;
+-------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Rõ rồi nhé, giá trị chính là số thứ tự của kí tự khác nhau đầu tiên trong bảng ASCII. 33 là kí tự chấm than, còn 32 là kí tự trắng. Còn dấu thì chỉ để xem cái nào nhỏ hơn hay lớn hơn mà thôi. Còn kí tự số 21 là kí tự điều khiển, không in ra được nên sẽ có &lt;code&gt;&#39;&#39;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;2-so-sánh-hai-số-thực&#34;&gt;2. So sánh hai số thực&lt;/h1&gt;
+
+&lt;p&gt;Đa số các ngôn ngữ lập trình đều có 2 kiểu số thực là &lt;code&gt;float&lt;/code&gt; và &lt;code&gt;double&lt;/code&gt;. Nhiều khi bất cẩn ta có thể sẽ có những phép so sánh như sau:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;float a = 0.123;
+double b = 0.123;
+printf(&amp;quot;A = %f \nB = %f\n&amp;quot;, a, b);
+if (a == b) {
+  printf(&amp;quot;BANG NHAU \n&amp;quot;);
+} else {
+  printf(&amp;quot;KHAC NHAU \n&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thực tiễn hai số đó bằng nhau nhưng vào máy thì 🤣&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;A = 0.123000
+B = 0.123000
+KHAC NHAU
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Code chạy ngon lành nhưng đôi khi không biết lỗi ở đâu ra, cái này thực sự rất nguy hiểm.&lt;/p&gt;
+
+&lt;h1 id=&#34;3-thực-hiện-phép-tính-trong-mệnh-đề-điều-kiện&#34;&gt;3. Thực hiện phép tính trong mệnh đề điều kiện&lt;/h1&gt;
+
+&lt;p&gt;Cái này một số bạn vẫn sẽ mắc bẫy vì đôi khi muốn rút gọn phép tính vào ngay trong lúc so sánh. Ví dụ bài toán kiểm tra số nguyên &lt;code&gt;a&lt;/code&gt; có gấp ba số &lt;code&gt;b&lt;/code&gt; hay không?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;int a = 30, b = 10;
+if (a / 3 == b) {
+  printf(&amp;quot;A gap ba B&amp;quot;);
+} else {
+  printf(&amp;quot;A khong gap ba B&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kết quả:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;A gap ba B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cũng đoạn trên thay thành &lt;code&gt;a = 10, b = 3&lt;/code&gt;, ta có kết quả mới:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;A gap ba B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vi diệu chưa? Sai tè le luôn. Bởi vì kết quả phép chia 2 số nguyên sẽ luôn là một số nguyên. Việc tính toán ở đây phải cẩn thận vì bên cạnh trường hợp làm tròn số thì còn lỗi tràn nữa:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;char a = 200;
+if (a * 2 &amp;gt; 100) {
+  printf (&amp;quot;2A &amp;gt; 100&amp;quot;);
+} else {
+  printf (&amp;quot;2A &amp;lt;= 100&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kết quả:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;2A &amp;lt;= 100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vâng, &lt;code&gt;400 &amp;lt;= 100&lt;/code&gt; chỉ vì nó tràn kiểu dữ liệu &lt;code&gt;char&lt;/code&gt; (tối đa 255 nên 2 * 200 = -112, và máy nó hiểu -112 &amp;lt;= 100 là đúng).&lt;/p&gt;
+
+&lt;h1 id=&#34;4-so-sánh-x-0-hay-0-x&#34;&gt;4. So sánh: x == 0 hay 0 == x?&lt;/h1&gt;
+
+&lt;p&gt;Lúc đi học thì gần như 100% người học đều được dạy rằng muốn so sánh A với một hằng B thì cứ nhất nhất là bên trái là A, bên phải là B. Nhưng mà với kiểu dữ liệu tham chiếu, liên quan đến con trỏ và đối tượng thì đây mới là vấn đề.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Bạn sẽ gặp NULL như chưa từng gặp với kiểu so sánh thứ nhất.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ví dụ 1 đoạn code Java kiểm tra 1 thằng có học lớp &amp;ldquo;CNTT&amp;rdquo; (là một chuỗi hằng) hay không.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;class HocSinh {
+	String hoTen;
+	Lop lop;
+}
+class Lop {
+	String tenLop;
+	String giaoVienChuNhiem;
+}
+
+public class Main {
+	public static void main(String[] args) {
+		HocSinh baAnh = new HocSinh();
+
+		if (baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { // So sánh
+			System.out.print(&amp;quot;Học lớp CNTT&amp;quot;);
+		} else {
+			System.out.print(&amp;quot;Không học lớp CNTT&amp;quot;);
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thử chạy phát:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Exception in thread &amp;quot;main&amp;quot; java.lang.NullPointerException
+	at Main.main(Main.java:15)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Do &lt;code&gt;baAnh.lop&lt;/code&gt; chưa được khởi tạo nên dẽ dính &lt;code&gt;null&lt;/code&gt; sẽ bị lỗi. Giải pháp nghĩ đến đầu tiên là kiểm tra khác null trước khi so sánh.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (baAnh.lop != null &amp;amp;&amp;amp; baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { ... }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Và nó đã chạy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Không học lớp CNTT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;May quá mới so sánh 1 thằng, lỡ so sánh vài thằng thì đúng là vêu mồm tập 2 😭, giải pháp cực kì đơn giản là đảo vị trí của 2 cái cho nhau, như thế này:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;if (&amp;quot;CNTT&amp;quot;.equals(baAnh.lop)) { ... }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cho ra kết quả tương tự:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Không học lớp CNTT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Đơn giản phải không nào, né được biết bao nhiêu là phiền phức, tương tự như vậy cứ đảo hết giá trị hằng so sánh lên trước, biến hoặc đối tượng cần so sánh ra sau. Ok nhé 👍&lt;/p&gt;
+
+&lt;p&gt;Chúc bạn cuối tuần vui vẻ.&lt;/p&gt;
+
+&lt;p&gt;🍀 ngbaanh 🍀&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
