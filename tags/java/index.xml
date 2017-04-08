@@ -222,8 +222,7 @@ class Lop {
 public class Main {
 	public static void main(String[] args) {
 		HocSinh baAnh = new HocSinh();
-    Lop lop = new Lop();
-    baAnh.lop = lop;
+    baAnh.lop = new Lop(); // Quên gán tên lớp
 
     if (baAnh.lop.equals(&amp;quot;CNTT&amp;quot;)) { // So sánh
 			System.out.print(&amp;quot;Học lớp CNTT&amp;quot;);
