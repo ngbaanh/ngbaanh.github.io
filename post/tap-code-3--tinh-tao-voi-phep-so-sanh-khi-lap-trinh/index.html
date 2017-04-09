@@ -315,7 +315,7 @@ gia_tri = 21 ---&gt; ''
 -------------
 </code></pre>
 
-<p>Rõ rồi nhé, giá trị chính là số thứ tự của kí tự khác nhau đầu tiên trong bảng ASCII. 33 là kí tự chấm than, còn 32 là kí tự trắng. Còn dấu thì chỉ để xem cái nào nhỏ hơn hay lớn hơn mà thôi. Còn kí tự số 21 là kí tự điều khiển, không in ra được nên sẽ có <code>''</code>.</p>
+<p>Rõ rồi nhé, giá trị chính là số <del>thứ tự</del> chênh lệch của kí tự khác nhau đầu tiên trong bảng ASCII. 33 là kí tự chấm than trừ null, còn 32 là kí tự trắng trừ null. Còn dấu thì chỉ để xem cái nào nhỏ hơn hay lớn hơn mà thôi. Còn số 21 là kí tự &lsquo;X&rsquo; - &lsquo;C&rsquo;, không in ra được nên sẽ có <code>''</code>.</p>
 
 <div class="alert alert-note">
   <p>Chú ý hàm strcmp() so sánh kiểu thứ tự từ điển, bảng alphabet của tiếng anh sẽ có khác một số ngôn ngữ khác, khi đó giải pháp thay thế là strcoll(), mình sẽ không giải thích ở đây.</p>
