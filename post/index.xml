@@ -11,6 +11,24 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>☘Tập Code 4: Thoát khỏi vòng lặp lồng nhau</title>
+      <link>https://ngbaanh.github.io/post/tap-code-4-thoat-khoi-vong-lap-long-nhau/</link>
+      <pubDate>Sat, 15 Apr 2017 23:46:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/post/tap-code-4-thoat-khoi-vong-lap-long-nhau/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://ngbaanh.github.io/img/post_img/tap-code-03/comparison.jpg&#34; alt=&#34;comparison - (c) Personal Trainer Land&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;**&lt;/p&gt;
+
+&lt;h1 id=&#34;thoát-vòng-lặp-đơn&#34;&gt;Thoát vòng lặp đơn&lt;/h1&gt;
+
+&lt;h1 id=&#34;thoát-vòng-lặp-lồng-nhau&#34;&gt;Thoát vòng lặp lồng nhau&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
       <title>☘Tập Code 3: Tỉnh táo với phép so sánh khi lập trình</title>
       <link>https://ngbaanh.github.io/post/tap-code-3--tinh-tao-voi-phep-so-sanh-khi-lap-trinh/</link>
       <pubDate>Sat, 08 Apr 2017 23:15:00 +0000</pubDate>
