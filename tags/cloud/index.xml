@@ -10,7 +10,7 @@
     <atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>OCR Scan &amp; Translate - Image Scanner &amp; Translato</title>
+      <title>OCR Scan &amp; Translate - Image Scanner &amp; Translator</title>
       <link>https://ngbaanh.github.io/project/scanner-and-translator/</link>
       <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -24,6 +24,15 @@
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ngbaanh.github.io/project/speak-and-text-translator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>New iOS Project</title>
+      <link>https://ngbaanh.github.io/project/docu-sign/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/docu-sign/</guid>
       <description></description>
     </item>
     
