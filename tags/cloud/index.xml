@@ -2,12 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Bá Anh Nguyễn</title>
-    <link>https://ngbaanh.github.io/tags/cloud/index.xml</link>
+    <link>https://ngbaanh.github.io/tags/cloud/</link>
     <description>Recent content in Cloud on Bá Anh Nguyễn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
-    <atom:link href="/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/cloud/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OCR Scan &amp; Translate - Image Scanner &amp; Translator</title>
@@ -19,20 +20,29 @@
     </item>
     
     <item>
-      <title>Speak &amp; Text Translator</title>
-      <link>https://ngbaanh.github.io/project/speak-and-text-translator/</link>
-      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      <title>Cloud App: Storage &amp; Music</title>
+      <link>https://ngbaanh.github.io/project/cloud-app-storage-and-music/</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://ngbaanh.github.io/project/speak-and-text-translator/</guid>
+      <guid>https://ngbaanh.github.io/project/cloud-app-storage-and-music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>New iOS Project</title>
-      <link>https://ngbaanh.github.io/project/docu-sign/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://ngbaanh.github.io/project/new-project/</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://ngbaanh.github.io/project/docu-sign/</guid>
+      <guid>https://ngbaanh.github.io/project/new-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speak &amp; Text Translator</title>
+      <link>https://ngbaanh.github.io/project/speak-and-text-translator/</link>
+      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/speak-and-text-translator/</guid>
       <description></description>
     </item>
     

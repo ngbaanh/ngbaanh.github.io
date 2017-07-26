@@ -2,12 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Academy on Bá Anh Nguyễn</title>
-    <link>https://ngbaanh.github.io/tags/academy/index.xml</link>
+    <link>https://ngbaanh.github.io/tags/academy/</link>
     <description>Recent content in Academy on Bá Anh Nguyễn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
-    <atom:link href="/tags/academy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/academy/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sudoku Generator</title>
