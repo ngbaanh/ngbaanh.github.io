@@ -7,8 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
-    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/mobi/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New iOS Project</title>
+      <link>https://ngbaanh.github.io/project/new-project/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/new-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>New iOS Project ##2</title>
+      <link>https://ngbaanh.github.io/project/new-project-2/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/new-project-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Combiner</title>
+      <link>https://ngbaanh.github.io/project/video-combiner/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/video-combiner/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>OCR Scan &amp; Translate - Image Scanner &amp; Translator</title>
@@ -25,15 +52,6 @@
       <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ngbaanh.github.io/project/cloud-app-storage-and-music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Video Combiner</title>
-      <link>https://ngbaanh.github.io/project/video-combiner/</link>
-      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://ngbaanh.github.io/project/video-combiner/</guid>
       <description></description>
     </item>
     

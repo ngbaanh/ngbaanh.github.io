@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Utility on Bá Anh Nguyễn</title>
+    <link>https://ngbaanh.github.io/tags/utility/</link>
+    <description>Recent content in Utility on Bá Anh Nguyễn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Bá Anh Nguyễn</copyright>
+    <lastBuildDate>Thu, 18 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/utility/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Video Combiner</title>
+      <link>https://ngbaanh.github.io/project/video-combiner/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ngbaanh.github.io/project/video-combiner/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
